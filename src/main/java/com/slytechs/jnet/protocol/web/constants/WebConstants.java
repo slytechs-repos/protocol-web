@@ -20,8 +20,6 @@ package com.slytechs.jnet.protocol.web.constants;
 /**
  * The Class WebConstants.
  *
- * @author Sly Technologies Inc
- * @author repos@slytechs.com
  * @author Mark Bednarczyk
  */
 public final class WebConstants {

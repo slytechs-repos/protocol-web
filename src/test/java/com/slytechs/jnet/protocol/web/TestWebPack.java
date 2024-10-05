@@ -26,8 +26,6 @@ import com.slytechs.jnet.protocol.pack.Pack;
 import com.slytechs.jnet.protocol.pack.ProtocolPackTable;
 
 /**
- * @author Sly Technologies Inc
- * @author repos@slytechs.com
  * @author Mark Bednarczyk
  *
  */

@@ -34,8 +34,6 @@ import com.slytechs.jnet.protocol.web.Http;
 /**
  * Web protocol pack. Table of all protocols included in the web protocol pack.
  * 
- * @author Sly Technologies Inc
- * @author repos@slytechs.com
  *
  */
 public enum WebIdTable implements HeaderInfo, PackId {

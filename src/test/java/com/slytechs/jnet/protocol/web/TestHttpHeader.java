@@ -34,8 +34,6 @@ import com.slytechs.jnet.protocol.web.Http;
 /**
  * VLAN header tests
  * 
- * @author Sly Technologies Inc
- * @author repos@slytechs.com
  * @author Mark Bednarczyk
  *
  */

@@ -25,8 +25,6 @@ import com.slytechs.jnet.protocol.descriptor.PacketDissector.RecordRecorder;
 /**
  * Web protocol pack, descriptor type 2 dissector.
  * 
- * @author Sly Technologies Inc
- * @author repos@slytechs.com
  *
  */
 class WebType2Dissector implements PacketDissectorExtension {

@@ -26,8 +26,6 @@ import com.slytechs.jnet.protocol.web.constants.WebIdTable;
 /**
  * Hypertext Markup Language (HTML).
  *
- * @author Sly Technologies Inc
- * @author repos@slytechs.com
  */
 @Meta
 public final class Html extends Header {

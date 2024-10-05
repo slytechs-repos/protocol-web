@@ -31,8 +31,6 @@ import com.slytechs.jnet.protocol.web.constants.WebIdTable;
 /**
  * Protocol pack level information about the protocols in this module.
  * 
- * @author Sly Technologies Inc
- * @author repos@slytechs.com
  */
 public final class WebPackDefinition extends Pack<WebIdTable> {
 

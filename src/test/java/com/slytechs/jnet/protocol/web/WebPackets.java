@@ -26,8 +26,6 @@ import com.slytechs.jnet.protocol.Packet;
 /**
  * Various hex packets used in testing.
  * 
- * @author Sly Technologies Inc
- * @author repos@slytechs.com
  * @author Mark Bednarczyk
  *
  */

@@ -24,8 +24,6 @@ import com.slytechs.jnet.protocol.web.constants.WebIdTable;
 /**
  * Hypertext Transfer Protocol (HTTP).
  * 
- * @author Sly Technologies Inc
- * @author repos@slytechs.com
  */
 @Meta
 public final class Http extends Header {
