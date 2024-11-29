@@ -19,7 +19,7 @@
 /**
  * Web protocol pack.
  * <p>
- * Provides support various web related protocols, data dechunking,
+ * Provides settingsSupport various web related protocols, data dechunking,
  * decompression, decryption and other services.
  * </p>
  * 
