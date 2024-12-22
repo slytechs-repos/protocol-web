@@ -19,13 +19,13 @@ package com.slytechs.jnet.protocol.web;
 
 import java.util.Optional;
 
-import com.slytechs.jnet.protocol.HeaderInfo;
-import com.slytechs.jnet.protocol.core.constants.PacketDescriptorType;
-import com.slytechs.jnet.protocol.descriptor.PacketDissectorExtension;
-import com.slytechs.jnet.protocol.descriptor.PacketDissectorExtension.DissectorExtensionFactory;
-import com.slytechs.jnet.protocol.pack.Pack;
-import com.slytechs.jnet.protocol.pack.PackId;
-import com.slytechs.jnet.protocol.pack.ProtocolPackTable;
+import com.slytechs.jnet.protocol.api.common.HeaderInfo;
+import com.slytechs.jnet.protocol.api.descriptor.PacketDissectorExtension;
+import com.slytechs.jnet.protocol.api.descriptor.PacketDissectorExtension.DissectorExtensionFactory;
+import com.slytechs.jnet.protocol.api.pack.Pack;
+import com.slytechs.jnet.protocol.api.pack.PackId;
+import com.slytechs.jnet.protocol.api.pack.ProtocolPackTable;
+import com.slytechs.jnet.protocol.tcpip.constants.PacketDescriptorType;
 import com.slytechs.jnet.protocol.web.constants.WebIdTable;
 
 /**
@@ -38,7 +38,7 @@ public final class WebPackDefinition extends Pack<WebIdTable> {
 	 * Extension factory.
 	 *
 	 * @return the dissector extension factory
-	 * @see com.slytechs.jnet.protocol.pack.Pack#extensionFactory()
+	 * @see com.slytechs.jnet.protocol.api.pack.Pack#extensionFactory()
 	 */
 	@Override
 	protected DissectorExtensionFactory extensionFactory() {

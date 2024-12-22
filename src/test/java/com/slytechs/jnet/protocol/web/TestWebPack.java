@@ -22,8 +22,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
-import com.slytechs.jnet.protocol.pack.Pack;
-import com.slytechs.jnet.protocol.pack.ProtocolPackTable;
+import com.slytechs.jnet.protocol.api.pack.Pack;
+import com.slytechs.jnet.protocol.api.pack.ProtocolPackTable;
 
 /**
  * @author Mark Bednarczyk

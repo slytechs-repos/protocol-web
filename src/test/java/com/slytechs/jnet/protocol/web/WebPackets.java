@@ -20,8 +20,8 @@ package com.slytechs.jnet.protocol.web;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 
-import com.slytechs.jnet.jnetruntime.util.HexStrings;
-import com.slytechs.jnet.protocol.Packet;
+import com.slytechs.jnet.platform.api.util.HexStrings;
+import com.slytechs.jnet.protocol.api.packet.Packet;
 
 /**
  * Various hex packets used in testing.
@@ -35,7 +35,7 @@ public enum WebPackets {
 	 * 192.168.1.140 174.143.213.184 HTTP 200 GET /images/layout/logo.png HTTP/1.0
 	 * 
 	 * <pre>
-	Frame 4: 200 bytes on wire (1600 bits), 200 bytes captured (1600 bits)
+	FrameHeader 4: 200 bytes on wire (1600 bits), 200 bytes captured (1600 bits)
 	Ethernet II, Src: ASUSTekC_b3:01:84 (00:1d:60:b3:01:84), Dst: Actionte_2f:47:87 (00:26:62:2f:47:87)
 	    Destination: Actionte_2f:47:87 (00:26:62:2f:47:87)
 	    Source: ASUSTekC_b3:01:84 (00:1d:60:b3:01:84)

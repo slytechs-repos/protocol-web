@@ -24,11 +24,11 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
-import com.slytechs.jnet.protocol.HeaderNotFound;
-import com.slytechs.jnet.protocol.core.constants.CoreConstants;
-import com.slytechs.jnet.protocol.core.constants.PacketDescriptorType;
-import com.slytechs.jnet.protocol.descriptor.PacketDissector;
-import com.slytechs.jnet.protocol.pack.Pack;
+import com.slytechs.jnet.protocol.api.common.HeaderNotFound;
+import com.slytechs.jnet.protocol.api.descriptor.PacketDissector;
+import com.slytechs.jnet.protocol.api.pack.Pack;
+import com.slytechs.jnet.protocol.tcpip.constants.CoreConstants;
+import com.slytechs.jnet.protocol.tcpip.constants.PacketDescriptorType;
 import com.slytechs.jnet.protocol.web.Http;
 
 /**
