@@ -4,17 +4,19 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.slytechs.jnet.protocol</groupId>
-		<artifactId>protocol-pack-sdk-parent</artifactId>
+		<artifactId>protocol-sdk-parent</artifactId>
 		<version>0.10.0-SNAPSHOT</version>
+		<relativePath>../protocol-sdk</relativePath>
 	</parent>
-	<artifactId>protocol-pack-web</artifactId>
+	
+	<artifactId>protocol-web</artifactId>
 	<name>Protocol SDK - Web Protocol Pack</name>
 	<description>Web family protocol pack</description>
 
 	<dependencies>
 		<dependency>
 			<groupId>com.slytechs.jnet.protocol</groupId>
-			<artifactId>protocol-pack-api</artifactId>
+			<artifactId>protocol-api</artifactId>
 			<version>${protocol-sdk.version}</version>
 		</dependency>
 	</dependencies>
