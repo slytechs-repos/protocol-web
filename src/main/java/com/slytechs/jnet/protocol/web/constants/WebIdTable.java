@@ -17,17 +17,17 @@
  */
 package com.slytechs.jnet.protocol.web.constants;
 
-import static com.slytechs.jnet.protocol.pack.ProtocolPackTable.*;
+import static com.slytechs.jnet.protocol.api.pack.ProtocolPackTable.*;
 
 import java.util.function.Supplier;
 
-import com.slytechs.jnet.protocol.Header;
-import com.slytechs.jnet.protocol.HeaderInfo;
-import com.slytechs.jnet.protocol.HeaderOptionInfo;
-import com.slytechs.jnet.protocol.HeaderSupplier;
-import com.slytechs.jnet.protocol.Other;
-import com.slytechs.jnet.protocol.pack.PackId;
-import com.slytechs.jnet.protocol.pack.ProtocolPackTable;
+import com.slytechs.jnet.protocol.api.common.Header;
+import com.slytechs.jnet.protocol.api.common.HeaderInfo;
+import com.slytechs.jnet.protocol.api.common.HeaderOptionInfo;
+import com.slytechs.jnet.protocol.api.common.HeaderSupplier;
+import com.slytechs.jnet.protocol.api.common.Other;
+import com.slytechs.jnet.protocol.api.pack.PackId;
+import com.slytechs.jnet.protocol.api.pack.ProtocolPackTable;
 import com.slytechs.jnet.protocol.web.Html;
 import com.slytechs.jnet.protocol.web.Http;
 

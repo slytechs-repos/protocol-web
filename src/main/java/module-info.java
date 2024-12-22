@@ -19,7 +19,7 @@
 /**
  * Web protocol pack.
  * <p>
- * Provides support various web related protocols, data dechunking,
+ * Provides settingsSupport various web related protocols, data dechunking,
  * decompression, decryption and other services.
  * </p>
  * 
@@ -29,6 +29,6 @@ module com.slytechs.jnet.protocol.web {
 	exports com.slytechs.jnet.protocol.web;
 	exports com.slytechs.jnet.protocol.web.constants;
 
-	requires transitive com.slytechs.jnet.protocol;
-	requires com.slytechs.jnet.jnetruntime;
+	requires com.slytechs.jnet.platform.api;
+	requires transitive com.slytechs.jnet.protocol.api;
 }

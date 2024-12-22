@@ -17,17 +17,17 @@
  */
 package com.slytechs.jnet.protocol.web;
 
-import static com.slytechs.jnet.protocol.pack.ProtocolPackTable.*;
+import static com.slytechs.jnet.protocol.api.pack.ProtocolPackTable.*;
 
 import java.util.function.Supplier;
 
-import com.slytechs.jnet.protocol.Header;
-import com.slytechs.jnet.protocol.HeaderInfo;
-import com.slytechs.jnet.protocol.HeaderOptionInfo;
-import com.slytechs.jnet.protocol.HeaderSupplier;
-import com.slytechs.jnet.protocol.Other;
-import com.slytechs.jnet.protocol.pack.PackId;
-import com.slytechs.jnet.protocol.pack.ProtocolPackTable;
+import com.slytechs.jnet.protocol.api.common.Header;
+import com.slytechs.jnet.protocol.api.common.HeaderInfo;
+import com.slytechs.jnet.protocol.api.common.HeaderOptionInfo;
+import com.slytechs.jnet.protocol.api.common.HeaderSupplier;
+import com.slytechs.jnet.protocol.api.common.Other;
+import com.slytechs.jnet.protocol.api.pack.PackId;
+import com.slytechs.jnet.protocol.api.pack.ProtocolPackTable;
 
 /**
  * Core protocol pack. Table of all protocols included in the core protocol
@@ -120,7 +120,7 @@ public enum WebIdTable implements HeaderInfo, PackId {
 	 * Gets the extension infos.
 	 *
 	 * @return the extension infos
-	 * @see com.slytechs.jnet.protocol.HeaderInfo#getOptionInfos()
+	 * @see com.slytechs.jnet.protocol.api.common.HeaderInfo#getOptionInfos()
 	 */
 	@Override
 	public HeaderOptionInfo[] getOptionInfos() {
@@ -131,7 +131,7 @@ public enum WebIdTable implements HeaderInfo, PackId {
 	 * Gets the header id.
 	 *
 	 * @return the header id
-	 * @see com.slytechs.jnet.protocol.HeaderInfo#id()
+	 * @see com.slytechs.jnet.protocol.api.common.HeaderInfo#id()
 	 */
 	@Override
 	public int id() {
@@ -152,7 +152,7 @@ public enum WebIdTable implements HeaderInfo, PackId {
 	 * New header instance.
 	 *
 	 * @return the header
-	 * @see com.slytechs.jnet.protocol.HeaderSupplier#newHeaderInstance()
+	 * @see com.slytechs.jnet.protocol.api.common.HeaderSupplier#newHeaderInstance()
 	 */
 	@Override
 	public Header newHeaderInstance() {
