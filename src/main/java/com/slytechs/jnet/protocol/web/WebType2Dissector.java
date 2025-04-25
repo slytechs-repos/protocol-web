@@ -19,8 +19,8 @@ package com.slytechs.jnet.protocol.web;
 
 import java.nio.ByteBuffer;
 
-import com.slytechs.jnet.protocol.api.descriptor.PacketDissectorExtension;
-import com.slytechs.jnet.protocol.api.descriptor.PacketDissector.RecordRecorder;
+import com.slytechs.jnet.protocol.api.descriptor.impl.PacketDissector.RecordRecorder;
+import com.slytechs.jnet.protocol.api.descriptor.impl.PacketDissectorExtension;
 
 /**
  * Web protocol pack, descriptor type 2 dissector.

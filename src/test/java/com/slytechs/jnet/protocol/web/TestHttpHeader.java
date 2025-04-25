@@ -25,11 +25,10 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import com.slytechs.jnet.protocol.api.common.HeaderNotFound;
-import com.slytechs.jnet.protocol.api.descriptor.PacketDissector;
+import com.slytechs.jnet.protocol.api.core.PacketDescriptorType;
+import com.slytechs.jnet.protocol.api.descriptor.DescriptorConstants;
+import com.slytechs.jnet.protocol.api.descriptor.impl.PacketDissector;
 import com.slytechs.jnet.protocol.api.pack.Pack;
-import com.slytechs.jnet.protocol.tcpip.constants.CoreConstants;
-import com.slytechs.jnet.protocol.tcpip.constants.PacketDescriptorType;
-import com.slytechs.jnet.protocol.web.Http;
 
 /**
  * VLAN header tests
@@ -50,7 +49,7 @@ class TestHttpHeader {
 			.dissector(PacketDescriptorType.TYPE2);
 
 	static final ByteBuffer DESC_BUFFER = ByteBuffer
-			.allocateDirect(CoreConstants.DESC_TYPE2_BYTE_SIZE_MAX)
+			.allocateDirect(DescriptorConstants.DESC_TYPE2_BYTE_SIZE_MAX)
 			.order(ByteOrder.nativeOrder());
 
 	/**
@@ -78,7 +77,7 @@ class TestHttpHeader {
 		System.out.println(packet.descriptor());
 
 		var http = packet.getHeader(new Http());
-		
+
 		System.out.println(http);
 
 //		assertEquals(0, http.priority());

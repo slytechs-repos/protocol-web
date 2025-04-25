@@ -20,12 +20,12 @@ package com.slytechs.jnet.protocol.web;
 import java.util.Optional;
 
 import com.slytechs.jnet.protocol.api.common.HeaderInfo;
-import com.slytechs.jnet.protocol.api.descriptor.PacketDissectorExtension;
-import com.slytechs.jnet.protocol.api.descriptor.PacketDissectorExtension.DissectorExtensionFactory;
+import com.slytechs.jnet.protocol.api.core.PacketDescriptorType;
+import com.slytechs.jnet.protocol.api.descriptor.impl.PacketDissectorExtension;
+import com.slytechs.jnet.protocol.api.descriptor.impl.PacketDissectorExtension.DissectorExtensionFactory;
 import com.slytechs.jnet.protocol.api.pack.Pack;
 import com.slytechs.jnet.protocol.api.pack.PackId;
 import com.slytechs.jnet.protocol.api.pack.ProtocolPackTable;
-import com.slytechs.jnet.protocol.tcpip.constants.PacketDescriptorType;
 import com.slytechs.jnet.protocol.web.constants.WebIdTable;
 
 /**
