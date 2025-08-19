@@ -15,29 +15,43 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package com.slytechs.jnet.protocol.web;
+package com.slytechs.jnet.protocol.web.html;
 
+import java.lang.foreign.Arena;
+import java.lang.foreign.MemorySegment;
 import java.nio.charset.StandardCharsets;
 
-import com.slytechs.jnet.protocol.api.common.Header;
-import com.slytechs.jnet.protocol.api.meta.Meta;
-import com.slytechs.jnet.protocol.web.constants.WebIdTable;
+import com.slytechs.jnet.protocol.api.Header;
+import com.slytechs.jnet.protocol.web.Web;
+
+import static java.lang.foreign.ValueLayout.*;
 
 /**
  * Hypertext Markup Language (HTML).
  *
  */
-@Meta
 public final class Html extends Header {
 
 	/** Html header ID. */
-	public static final int ID = WebIdTable.WEB_ID_HTML;
+	public static final int ID = Web.Constants.HTML_ID;
 
 	/**
 	 * Instantiates a new html.
 	 */
 	public Html() {
-		super(ID);
+		super(ID, JAVA_BYTE);
+	}
+
+	public Html(Arena arena) {
+		super(ID, JAVA_BYTE, arena);
+	}
+
+	public Html(MemorySegment pointer) {
+		super(ID, JAVA_BYTE, pointer);
+	}
+
+	public Html(MemorySegment seg, long offset) {
+		super(ID, JAVA_BYTE, seg, offset);
 	}
 
 	/**

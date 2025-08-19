@@ -1,7 +1,7 @@
 /*
  * Sly Technologies Free License
  * 
- * Copyright 2023 Sly Technologies Inc.
+ * Copyright 2025 Sly Technologies Inc.
  *
  * Licensed under the Sly Technologies Free License (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -15,27 +15,16 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package com.slytechs.jnet.protocol.web.constants;
+package com.slytechs.jnet.protocol.web.impl;
+
+import com.slytechs.jnet.protocol.api.pack.ProtocolPackPlugin;
 
 /**
- * The Class WebConstants.
+ * 
  *
- * @author Mark Bednarczyk
+ * @author Mark Bednarczyk [mark@slytechs.com]
+ * @author Sly Technologies Inc.
  */
-public final class WebConstants {
-	
-	/* @formatter:off - http constants */
-	/* @formatter:on - http constants */
-	
-	/* @formatter:off - html constants */
-	/* @formatter:on - html constants */
-
-	
-
-	/**
-	 * Instantiates a new web constants.
-	 */
-	private WebConstants() {
-	}
+public class WebPlugin implements ProtocolPackPlugin {
 
 }

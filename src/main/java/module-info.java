@@ -25,10 +25,17 @@
  * 
  * @author mark
  */
+
+import com.slytechs.jnet.protocol.web.impl.WebPlugin;
+
 module com.slytechs.jnet.protocol.web {
 	exports com.slytechs.jnet.protocol.web;
-	exports com.slytechs.jnet.protocol.web.constants;
+	exports com.slytechs.jnet.protocol.web.http;
+	exports com.slytechs.jnet.protocol.web.html;
 
 	requires com.slytechs.jnet.platform.api;
 	requires transitive com.slytechs.jnet.protocol.api;
+
+	provides com.slytechs.jnet.protocol.api.pack.ProtocolPackPlugin with WebPlugin;
+
 }

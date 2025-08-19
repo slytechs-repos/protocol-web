@@ -15,27 +15,39 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package com.slytechs.jnet.protocol.web;
+package com.slytechs.jnet.protocol.web.http;
 
-import com.slytechs.jnet.protocol.api.common.Header;
-import com.slytechs.jnet.protocol.api.meta.Meta;
-import com.slytechs.jnet.protocol.web.constants.WebIdTable;
+import java.lang.foreign.Arena;
+import java.lang.foreign.MemorySegment;
+
+import com.slytechs.jnet.protocol.api.Header;
+import com.slytechs.jnet.protocol.web.Web;
+
+import static java.lang.foreign.ValueLayout.*;
 
 /**
  * Hypertext Transfer Protocol (HTTP).
  * 
  */
-@Meta
 public final class Http extends Header {
-	
-	/** The Constant ID. */
-	public static final int ID = WebIdTable.WEB_ID_HTTP;
 
-	/**
-	 * Instantiates a new http.
-	 */
+	/** The Constant ID. */
+	public static final int ID = Web.Constants.HTTP_ID;
+
 	public Http() {
-		super(ID);
+		super(ID, JAVA_BYTE);
+	}
+
+	public Http(Arena arena) {
+		super(ID, JAVA_BYTE, arena);
+	}
+
+	public Http(MemorySegment pointer) {
+		super(ID, JAVA_BYTE, pointer);
+	}
+
+	public Http(MemorySegment seg, long offset) {
+		super(ID, JAVA_BYTE, seg, offset);
 	}
 
 	/**
