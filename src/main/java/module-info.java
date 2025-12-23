@@ -33,7 +33,7 @@ module com.slytechs.jnet.protocol.web {
 	exports com.slytechs.jnet.protocol.web.http;
 	exports com.slytechs.jnet.protocol.web.html;
 
-	requires com.slytechs.jnet.platform.api;
+	requires com.slytechs.jnet.core.api;
 	requires transitive com.slytechs.jnet.protocol.api;
 
 	provides com.slytechs.jnet.protocol.api.pack.ProtocolPackPlugin with WebPlugin;

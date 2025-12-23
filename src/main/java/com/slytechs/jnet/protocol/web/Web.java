@@ -23,7 +23,7 @@ import java.util.List;
 
 import com.slytechs.jnet.protocol.api.Header;
 import com.slytechs.jnet.protocol.api.HeaderFactory;
-import com.slytechs.jnet.protocol.api.Option;
+import com.slytechs.jnet.protocol.api.HeaderExtension;
 import com.slytechs.jnet.protocol.api.Protocol;
 import com.slytechs.jnet.protocol.api.pack.ProtocolPack;
 import com.slytechs.jnet.protocol.web.html.Html;
@@ -59,7 +59,7 @@ public enum Web implements Protocol {
 	}
 
 	/**
-	 * @see com.slytechs.jnet.proto.api.Protocol#id()
+	 * @see com.slytechs.jnet.proto.api.Protocol#descriptorId()
 	 */
 	@Override
 	public int id() {
@@ -78,7 +78,7 @@ public enum Web implements Protocol {
 	 * @see com.slytechs.jnet.proto.api.Protocol#listOptions()
 	 */
 	@Override
-	public List<Option> listOptions() {
+	public List<HeaderExtension> listOptions() {
 		throw new UnsupportedOperationException("not implemented yet");
 	}
 

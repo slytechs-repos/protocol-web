@@ -17,10 +17,7 @@
  */
 package com.slytechs.jnet.protocol.web.http;
 
-import java.lang.foreign.Arena;
-import java.lang.foreign.MemorySegment;
-
-import com.slytechs.jnet.protocol.api.Header;
+import com.slytechs.jnet.protocol.api.FixedHeader;
 import com.slytechs.jnet.protocol.web.Web;
 
 import static java.lang.foreign.ValueLayout.*;
@@ -29,25 +26,13 @@ import static java.lang.foreign.ValueLayout.*;
  * Hypertext Transfer Protocol (HTTP).
  * 
  */
-public final class Http extends Header {
+public final class Http extends FixedHeader {
 
 	/** The Constant ID. */
 	public static final int ID = Web.Constants.HTTP_ID;
 
 	public Http() {
 		super(ID, JAVA_BYTE);
-	}
-
-	public Http(Arena arena) {
-		super(ID, JAVA_BYTE, arena);
-	}
-
-	public Http(MemorySegment pointer) {
-		super(ID, JAVA_BYTE, pointer);
-	}
-
-	public Http(MemorySegment seg, long offset) {
-		super(ID, JAVA_BYTE, seg, offset);
 	}
 
 	/**

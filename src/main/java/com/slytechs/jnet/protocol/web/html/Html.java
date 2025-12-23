@@ -17,11 +17,9 @@
  */
 package com.slytechs.jnet.protocol.web.html;
 
-import java.lang.foreign.Arena;
-import java.lang.foreign.MemorySegment;
 import java.nio.charset.StandardCharsets;
 
-import com.slytechs.jnet.protocol.api.Header;
+import com.slytechs.jnet.protocol.api.FixedHeader;
 import com.slytechs.jnet.protocol.web.Web;
 
 import static java.lang.foreign.ValueLayout.*;
@@ -30,7 +28,7 @@ import static java.lang.foreign.ValueLayout.*;
  * Hypertext Markup Language (HTML).
  *
  */
-public final class Html extends Header {
+public final class Html extends FixedHeader {
 
 	/** Html header ID. */
 	public static final int ID = Web.Constants.HTML_ID;
@@ -42,25 +40,13 @@ public final class Html extends Header {
 		super(ID, JAVA_BYTE);
 	}
 
-	public Html(Arena arena) {
-		super(ID, JAVA_BYTE, arena);
-	}
-
-	public Html(MemorySegment pointer) {
-		super(ID, JAVA_BYTE, pointer);
-	}
-
-	public Html(MemorySegment seg, long offset) {
-		super(ID, JAVA_BYTE, seg, offset);
-	}
-
 	/**
 	 * The contents of the html.
 	 *
 	 * @return the char[]
 	 */
 	public char[] text() {
-		byte[] array = new byte[headerLength()];
+		byte[] array = new byte[(int) headerMinLength()];
 
 		return new String(array, StandardCharsets.UTF_8)
 				.toCharArray();
