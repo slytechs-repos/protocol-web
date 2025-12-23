@@ -26,16 +26,16 @@
  * @author mark
  */
 
-import com.slytechs.jnet.protocol.web.impl.WebPlugin;
+import com.slytechs.sdk.protocol.web.impl.WebPlugin;
 
-module com.slytechs.jnet.protocol.web {
-	exports com.slytechs.jnet.protocol.web;
-	exports com.slytechs.jnet.protocol.web.http;
-	exports com.slytechs.jnet.protocol.web.html;
+module com.slytechs.sdk.protocol.web {
+	exports com.slytechs.sdk.protocol.web;
+	exports com.slytechs.sdk.protocol.web.http;
+	exports com.slytechs.sdk.protocol.web.html;
 
-	requires com.slytechs.jnet.core.api;
-	requires transitive com.slytechs.jnet.protocol.api;
+	requires com.slytechs.sdk.common;
+	requires transitive com.slytechs.sdk.protocol.core;
 
-	provides com.slytechs.jnet.protocol.api.pack.ProtocolPackPlugin with WebPlugin;
+	provides com.slytechs.sdk.protocol.core.pack.ProtocolPackPlugin with WebPlugin;
 
 }

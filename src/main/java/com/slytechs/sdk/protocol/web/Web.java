@@ -15,20 +15,20 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package com.slytechs.jnet.protocol.web;
+package com.slytechs.sdk.protocol.web;
 
-import static com.slytechs.jnet.protocol.api.pack.ProtocolPack.*;
+import static com.slytechs.sdk.protocol.core.pack.ProtocolPack.*;
 
 import java.util.List;
 
-import com.slytechs.jnet.protocol.api.Header;
-import com.slytechs.jnet.protocol.api.HeaderFactory;
-import com.slytechs.jnet.protocol.api.HeaderExtension;
-import com.slytechs.jnet.protocol.api.Protocol;
-import com.slytechs.jnet.protocol.api.pack.ProtocolPack;
-import com.slytechs.jnet.protocol.web.html.Html;
-import com.slytechs.jnet.protocol.web.http.Http;
-import com.slytechs.jnet.protocol.web.impl.WebProtocolPack;
+import com.slytechs.sdk.protocol.core.Header;
+import com.slytechs.sdk.protocol.core.HeaderExtension;
+import com.slytechs.sdk.protocol.core.HeaderFactory;
+import com.slytechs.sdk.protocol.core.Protocol;
+import com.slytechs.sdk.protocol.core.pack.ProtocolPack;
+import com.slytechs.sdk.protocol.web.html.Html;
+import com.slytechs.sdk.protocol.web.http.Http;
+import com.slytechs.sdk.protocol.web.impl.WebProtocolPack;
 
 /**
  * @author Mark Bednarczyk [mark@slytechs.com]
@@ -83,7 +83,7 @@ public enum Web implements Protocol {
 	}
 
 	/**
-	 * @see com.slytechs.jnet.protocol.api.Protocol#pack()
+	 * @see com.slytechs.sdk.protocol.core.Protocol#pack()
 	 */
 	@Override
 	public ProtocolPack pack() {

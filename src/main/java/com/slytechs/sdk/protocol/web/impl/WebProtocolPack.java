@@ -15,16 +15,16 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package com.slytechs.jnet.protocol.web.impl;
+package com.slytechs.sdk.protocol.web.impl;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.atomic.AtomicReference;
 
-import com.slytechs.jnet.protocol.api.Header;
-import com.slytechs.jnet.protocol.api.Protocol;
-import com.slytechs.jnet.protocol.api.pack.AbstractProtocolPack;
-import com.slytechs.jnet.protocol.api.pack.ProtocolPack;
+import com.slytechs.sdk.protocol.core.Header;
+import com.slytechs.sdk.protocol.core.Protocol;
+import com.slytechs.sdk.protocol.core.pack.AbstractProtocolPack;
+import com.slytechs.sdk.protocol.core.pack.ProtocolPack;
 
 /**
  * @author Mark Bednarczyk [mark@slytechs.com]

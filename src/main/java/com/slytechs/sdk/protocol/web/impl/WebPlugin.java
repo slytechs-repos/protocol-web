@@ -15,9 +15,9 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package com.slytechs.jnet.protocol.web.impl;
+package com.slytechs.sdk.protocol.web.impl;
 
-import com.slytechs.jnet.protocol.api.pack.ProtocolPackPlugin;
+import com.slytechs.sdk.protocol.core.pack.ProtocolPackPlugin;
 
 /**
  * 
