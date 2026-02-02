@@ -17,32 +17,17 @@
  */
 package com.slytechs.sdk.protocol.web;
 
-import static com.slytechs.sdk.protocol.core.pack.ProtocolPack.*;
-
-import java.util.List;
-
-import com.slytechs.sdk.protocol.core.Header;
-import com.slytechs.sdk.protocol.core.HeaderExtension;
-import com.slytechs.sdk.protocol.core.HeaderFactory;
-import com.slytechs.sdk.protocol.core.Protocol;
-import com.slytechs.sdk.protocol.core.pack.ProtocolPack;
-import com.slytechs.sdk.protocol.web.html.Html;
-import com.slytechs.sdk.protocol.web.http.Http;
-import com.slytechs.sdk.protocol.web.impl.WebProtocolPack;
+import com.slytechs.sdk.protocol.core.id.ProtocolId;
+import com.slytechs.sdk.protocol.core.id.ProtocolIds;
 
 /**
  * @author Mark Bednarczyk [mark@slytechs.com]
  * @author Sly Technologies Inc.
  */
-public enum Web implements Protocol {
-	HTTP(Http.class, Constants.HTTP_ID),
-	HTML(Html.class, Constants.HTML_ID),
+public enum Web implements ProtocolId {
+	HTTP(ProtocolIds.HTTP),
+	HTML(ProtocolIds.HTML),
 	;
-
-	public interface Constants {
-		int HTTP_ID = WEB_ID | 1;
-		int HTML_ID = WEB_ID | 2;
-	}
 
 	private final int id;
 
@@ -54,40 +39,16 @@ public enum Web implements Protocol {
 		return null;
 	}
 
-	<T extends Header> Web(Class<T> headerClass, int id) {
+	Web(int id) {
 		this.id = id;
 	}
 
 	/**
-	 * @see com.slytechs.jnet.proto.api.Protocol#descriptorId()
+	 * @see com.slytechs.jnet.proto.api.Protocol#id()
 	 */
 	@Override
 	public int id() {
 		return id;
-	}
-
-	/**
-	 * @see com.slytechs.jnet.proto.api.Protocol#headerFactory()
-	 */
-	@Override
-	public HeaderFactory<?> headerFactory() {
-		throw new UnsupportedOperationException("not implemented yet");
-	}
-
-	/**
-	 * @see com.slytechs.jnet.proto.api.Protocol#listOptions()
-	 */
-	@Override
-	public List<HeaderExtension> listOptions() {
-		throw new UnsupportedOperationException("not implemented yet");
-	}
-
-	/**
-	 * @see com.slytechs.sdk.protocol.core.Protocol#pack()
-	 */
-	@Override
-	public ProtocolPack pack() {
-		return WebProtocolPack.get();
 	}
 
 }

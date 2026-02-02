@@ -19,8 +19,8 @@ package com.slytechs.sdk.protocol.web.html;
 
 import java.nio.charset.StandardCharsets;
 
-import com.slytechs.sdk.protocol.core.FixedHeader;
-import com.slytechs.sdk.protocol.web.Web;
+import com.slytechs.sdk.protocol.core.header.FixedHeader;
+import com.slytechs.sdk.protocol.core.id.ProtocolIds;
 
 import static java.lang.foreign.ValueLayout.*;
 
@@ -31,7 +31,7 @@ import static java.lang.foreign.ValueLayout.*;
 public final class Html extends FixedHeader {
 
 	/** Html header ID. */
-	public static final int ID = Web.Constants.HTML_ID;
+	public static final int ID = ProtocolIds.HTML;
 
 	/**
 	 * Instantiates a new html.

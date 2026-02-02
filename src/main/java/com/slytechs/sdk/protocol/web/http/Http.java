@@ -17,8 +17,8 @@
  */
 package com.slytechs.sdk.protocol.web.http;
 
-import com.slytechs.sdk.protocol.core.FixedHeader;
-import com.slytechs.sdk.protocol.web.Web;
+import com.slytechs.sdk.protocol.core.header.FixedHeader;
+import com.slytechs.sdk.protocol.core.id.ProtocolIds;
 
 import static java.lang.foreign.ValueLayout.*;
 
@@ -29,7 +29,7 @@ import static java.lang.foreign.ValueLayout.*;
 public final class Http extends FixedHeader {
 
 	/** The Constant ID. */
-	public static final int ID = Web.Constants.HTTP_ID;
+	public static final int ID = ProtocolIds.HTTP;
 
 	public Http() {
 		super(ID, JAVA_BYTE);

@@ -26,8 +26,6 @@
  * @author mark
  */
 
-import com.slytechs.sdk.protocol.web.impl.WebPlugin;
-
 module com.slytechs.sdk.protocol.web {
 	exports com.slytechs.sdk.protocol.web;
 	exports com.slytechs.sdk.protocol.web.http;
@@ -36,6 +34,7 @@ module com.slytechs.sdk.protocol.web {
 	requires com.slytechs.sdk.common;
 	requires transitive com.slytechs.sdk.protocol.core;
 
-	provides com.slytechs.sdk.protocol.core.pack.ProtocolPackPlugin with WebPlugin;
+	provides com.slytechs.sdk.protocol.core.spi.PackProvider
+			with com.slytechs.sdk.protocol.web.impl.WebProvider;
 
 }
