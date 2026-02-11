@@ -19,6 +19,7 @@ package com.slytechs.sdk.protocol.web.html;
 
 import java.nio.charset.StandardCharsets;
 
+import com.slytechs.sdk.common.text.DataEmitter;
 import com.slytechs.sdk.protocol.core.header.FixedHeader;
 import com.slytechs.sdk.protocol.core.id.ProtocolIds;
 
@@ -32,7 +33,16 @@ public final class Html extends FixedHeader {
 
 	/** Html header ID. */
 	public static final int ID = ProtocolIds.HTML;
+	
+	// @formatter:off
+	private static final DataEmitter<Html> HTML_EMITTER;
+	static {
+		HTML_EMITTER = new DataEmitter<>();
 
+		HTML_EMITTER.section("Hypertext Markup Language ({html.len} bytes)", sec -> sec
+				.field("Length", h -> h.headerLength(), "html.len"));
+	}
+	// @formatter:on
 	/**
 	 * Instantiates a new html.
 	 */
@@ -50,6 +60,14 @@ public final class Html extends FixedHeader {
 
 		return new String(array, StandardCharsets.UTF_8)
 				.toCharArray();
+	}
+
+	/**
+	 * @see com.slytechs.sdk.common.text.Textual#dataEmitter()
+	 */
+	@Override
+	public DataEmitter<?> dataEmitter() {
+		return HTML_EMITTER;
 	}
 
 }

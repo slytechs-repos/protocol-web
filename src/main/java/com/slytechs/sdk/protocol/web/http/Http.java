@@ -17,6 +17,7 @@
  */
 package com.slytechs.sdk.protocol.web.http;
 
+import com.slytechs.sdk.common.text.DataEmitter;
 import com.slytechs.sdk.protocol.core.header.FixedHeader;
 import com.slytechs.sdk.protocol.core.id.ProtocolIds;
 
@@ -31,6 +32,15 @@ public final class Http extends FixedHeader {
 	/** The Constant ID. */
 	public static final int ID = ProtocolIds.HTTP;
 
+	// @formatter:off
+	private static final DataEmitter<Http> HTTP_EMITTER;
+	static {
+		HTTP_EMITTER = new DataEmitter<>();
+
+		HTTP_EMITTER.section("Hypertext Transfer Protocol ({http.len} bytes)", sec -> sec
+				.field("Length", h -> h.headerLength(), "http.len"));
+	}
+	// @formatter:on
 	public Http() {
 		super(ID, JAVA_BYTE);
 	}
@@ -69,6 +79,14 @@ public final class Http extends FixedHeader {
 	 */
 	public char[] decompressedData() {
 		throw new UnsupportedOperationException("not implemented yet");
+	}
+
+	/**
+	 * @see com.slytechs.sdk.common.text.Textual#dataEmitter()
+	 */
+	@Override
+	public DataEmitter<?> dataEmitter() {
+		return HTTP_EMITTER;
 	}
 
 }
